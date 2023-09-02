@@ -11,7 +11,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     textBoxDiv.style.backgroundColor =   "rgba(217, 217, 217,0.85)";
     textBoxDiv.style.color = "#000";
     textBoxDiv.style.textAlign = "left";
-    textBoxDiv.style.padding = "6px";
+    textBoxDiv.style.padding = "3px";
     textBoxDiv.style.position = "absolute";
     textBoxDiv.style.width = "auto";
     textBoxDiv.style.height = "auto";
@@ -33,10 +33,13 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     textBoxDiv.appendChild(charCount);
   }
 
+  if(message.action === "stopModify"){
+    doNothing();
+  }
 
   document.addEventListener("mouseup", function(event) {
     var popup = document.getElementById("hidepopUp");
-    console.log("once clicked pop up");
+    //console.log("once clicked pop up");
     popup.style.display = 'none';
     clientX = event.pageX;
     clientY = event.pageY;
