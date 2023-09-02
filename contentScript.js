@@ -32,6 +32,12 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
       charCount.appendChild(node1);
       textBoxDiv.appendChild(charCount);
     }
+    document.addEventListener("mouseup", function(event) {
+      var popup = document.getElementById("hidepopUp");
+      popup.style.display = 'none';
+      clientX = event.pageX;
+      clientY = event.pageY;
+  });
   });
 
   /****************************** */
@@ -86,12 +92,12 @@ function runTextManipulation(){
         }
 };
 
-document.addEventListener("mouseup", function(event) {
-    var popup = document.getElementById("hidepopUp");
-    popup.style.display = 'none';
-    clientX = event.pageX;
-    clientY = event.pageY;
-});
+// document.addEventListener("mouseup", function(event) {
+//     var popup = document.getElementById("hidepopUp");
+//     popup.style.display = 'none';
+//     clientX = event.pageX;
+//     clientY = event.pageY;
+// });
 
 function getHighlightedText() {
     var text = "";
