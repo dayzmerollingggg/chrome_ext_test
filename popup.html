@@ -3,10 +3,17 @@
 <head>
   <title>DOM Modifier Extension</title>
   <script src="popup.js"></script>
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
   <!-- <button id="modify-button">Modify DOM</button> -->
-  <label for="toggle-switch">Enable Extension:</label>
-  <input type="checkbox" id="toggle-switch">
+  <label for="toggle-switch">Word Counter</label>
+  <p>
+    Extension checked but not working? Turn it off and back on again!
+  </p>
+  <div class="checkbox-container">
+    <input type="checkbox" id="toggle-switch">
+    <span class="slider"></span>
+  </div>
 </body>
 </html>

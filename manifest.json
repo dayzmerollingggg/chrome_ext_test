@@ -19,11 +19,15 @@
     "commands": {
       "select-all" : {
           "suggested_key": {
-               "default": "Ctrl+A",
-               "mac": "Command+A" 
+               "default": "Ctrl+Q",
+               "mac": "Command+Q" 
           },
           "description": "select all text"
       }
   }
+  ,
+      "background": {
+        "service_worker": "background.js"
+      }
 }
   
